@@ -29,6 +29,7 @@ jobs:
           fi
           echo "Latest tag: $latest_tag"
           echo "tag=$latest_tag" >> $GITHUB_OUTPUT
+          git checkout "$latest_tag"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
